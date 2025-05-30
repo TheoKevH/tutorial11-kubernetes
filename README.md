@@ -40,7 +40,11 @@
 
 It is on the file `recreate.yaml`
 
->
+>4. What do you think are the benefits of using Kubernetes manifest files? Recall your experience in deploying the app manually and compare it to your experience when deploying the same app by applying the manifest files (i.e., invoking `kubectl apply -f` command) to the cluster.
+
+<p align="justify">Kubernetes manifest files let us describe how we want our app to run, and Kubernetes will make it happen. Instead of manually creating pods, services, or deployments, we just write down the desired setup in a yaml file. Then, we can use that file to easily deploy, update, or remove the app. This saves time, avoids manual work, and makes it easy to recreate the app in another cluster later on.
+</p>
+
 
 
 
