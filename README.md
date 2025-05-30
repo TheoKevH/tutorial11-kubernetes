@@ -25,5 +25,22 @@
 
 >2. Try deploying the Spring Petclinic REST using Recreate deployment strategy and document your attempt.
 
+- First, we change the `deployment.yaml` file. Change the strategy from RollingUpdate to Recreate.
+![strategy](img/recreate.png)
+- Next, we delete the metadata (because it will be automatically generated). Remove unnecessary fields such as Annotations, CreationTimestamp, Generation, ResourceVersion, and UID.
+![metadata](img/metadata.png)
+- Also, delete the status at the end of the `deployment.yaml` file.
+- Apply the changes using this command:
+    >kubectl apply -f deployment.yaml`
+- I try to change the image version to a different one to test out the new deployment strategy.
+- Because of the Recreate strategy, all the pods would be unavailable as they would be rebuilt. The old pods are deleted and new ones are made according to the changes in the image version. Here is the result:
+![result](img/result.png)
+
+>3.  Prepare different manifest files for executing Recreate deployment strategy.
+
+It is on the file `recreate.yaml`
+
+>
+
 
 
