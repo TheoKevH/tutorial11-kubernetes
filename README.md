@@ -15,3 +15,15 @@
 
 <p align="justify">The <code>-n</code> flag stands for namespace. The command <code>kubectl get pods, services -n kube-system</code> is used to list all pods and services within the <code>kube-system</code> namespace. Our earlier pods and services were created in a different namespace, more specifically the <code>default</code> namespace. That's why the ones we created earlier didn’t show up in the output of this command.
 </p>
+
+## Reflection on Rolling Update & Kubernetes Manifest File
+
+>1. What is the difference between Rolling Update and Recreate deployment strategy?
+
+<p align="justify">The Rolling Update strategy updates pods gradually, replacing them one at a time while keeping the old ones running to ensure the application remains available during the process. In contrast, the Recreate strategy stops all existing pods first before launching new ones, which causes a temporary downtime while the update takes place.
+</p>
+
+>2. Try deploying the Spring Petclinic REST using Recreate deployment strategy and document your attempt.
+
+
+
